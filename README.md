@@ -303,4 +303,3 @@ The project closely follows the JPEG baseline specification and provides a deep 
 2. Wallace, G.K., *The JPEG Still Picture Compression Standard*
 3. Gonzalez & Woods, *Digital Image Processing*
 
-# Baseline-JPEG-Compression-from-Scratch

@@ -1,9 +1,11 @@
-from utils.image_io import load_image
+from utils.image_io import load_image, save_image
 from encoder.jpeg_encoder import encode_jpeg
 from utils.logger import log_stage
+from decoder.jpeg_decoder import decode_jpeg
 
 INPUT = "data/input/input_image.jpg"
-OUTPUT = "data/output/compressed.jpg"
+COMPRESSED = "data/output/compressed.jpg"
+RECON = "data/output/reconstructed.png"
 
 if __name__ == "__main__":
     img = load_image(INPUT)
@@ -15,4 +17,11 @@ if __name__ == "__main__":
         next_step="Image will be padded and split into 8x8 blocks"
     )
 
-    encode_jpeg(img, OUTPUT)
+    print("Encoding...")
+    encode_jpeg(img, COMPRESSED)
+
+    print("Decoding...")
+    reconstructed = decode_jpeg(COMPRESSED)
+    save_image(RECON, reconstructed)
+
+    print("Decoding complete. Output saved.")
