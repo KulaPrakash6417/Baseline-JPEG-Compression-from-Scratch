@@ -1,0 +1,7 @@
+SOI = b"\xff\xd8"
+EOI = b"\xff\xd9"
+APP0 = b"\xff\xe0"
+DQT = b"\xff\xdb"
+SOF0 = b"\xff\xc0"
+DHT = b"\xff\xc4"
+SOS = b"\xff\xda"
